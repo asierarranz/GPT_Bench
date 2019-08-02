@@ -4,7 +4,10 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 import time
 import shutil
 import gpt_2_simple as gpt2
-shutil.rmtree('./checkpoint')
+try:
+	shutil.rmtree('./checkpoint')
+except:
+	pass
 
 sess = gpt2.start_tf_sess()
 t1=time.time()
