@@ -1,0 +1,6 @@
+tensorflow-gpu
+regex
+requests
+tqdm
+numpy
+toposort
