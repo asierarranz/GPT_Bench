@@ -16,7 +16,7 @@ print("GPT 117M BENCHMARK STARTED!")
 gpt2.finetune(sess,
               'shakespeare.txt',
               model_name="117M",
-              steps=1000) 
+              steps=200) 
 gpt2.generate(sess)
 print("GPT 117M BENCHMARK ENDED!")  
 t2=time.time()-t1
@@ -29,14 +29,14 @@ except:
 	pass
 
 gpt2.download_gpt2(model_name="345M")
-sess = gpt2.start_tf_sess()
+sess2 = gpt2.start_tf_sess()
 t1=time.time()
 print("GPT 345M BENCHMARK STARTED!")
-gpt2.finetune(sess,
+gpt2.finetune(sess2,
               'shakespeare.txt',
               model_name="345M",
-              steps=1000) 
-gpt2.generate(sess)
+              steps=200) 
+gpt2.generate(sess2)
 print("GPT 345M BENCHMARK ENDED!")  
 t2=time.time()-t1
 gpt345t=t2

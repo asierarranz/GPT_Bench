@@ -15,7 +15,7 @@ print("GPT BENCHMARK STARTED!")
 gpt2.finetune(sess,
               'shakespeare.txt',
               model_name="345M",
-              steps=1000) 
+              steps=400) 
 gpt2.generate(sess)
 print("GPT BENCHMARK ENDED!")  
 t2=time.time()-t1
